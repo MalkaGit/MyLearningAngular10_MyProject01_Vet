@@ -1,0 +1,15 @@
+<p>TODEL employee:</p>
+<div class="employee-form">
+    <h3>{{ employee.name || 'New Employee' }}</h3>
+    <label>Name: <input [(ngModel)]="employee.name" /></label>
+    <label>Role:
+      <select [(ngModel)]="employee.role">
+        <option value="vet">Vet</option>
+        <option value="assistant">Assistant</option>
+      </select>
+    </label>
+    <label>Address: <input [(ngModel)]="employee.address" /></label>
+    <button (click)="save.emit()">Save</button>
+    <button (click)="cancel.emit()">Cancel</button>
+  </div>
+  

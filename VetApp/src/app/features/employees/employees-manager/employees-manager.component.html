@@ -1,1 +1,17 @@
-<p>employees-manager works!</p>
+<div class="manager-container">
+    <p>employees-manager</p>
+    <a routerLink="/employees">🔙 Employees</a>
+    <app-employees-manager-master
+      [employees]="employees"
+      (select)="selectEmployee($event)"
+      (add)="addEmployee()"
+    ></app-employees-manager-master>
+  
+    <app-employees-manager-details
+      *ngIf="selectedEmployee"
+      [employee]="selectedEmployee"
+      (save)="saveEmployee()"
+      (cancel)="cancelEdit()"
+    ></app-employees-manager-details>
+  </div>
+  

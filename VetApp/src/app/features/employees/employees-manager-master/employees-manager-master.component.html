@@ -1,0 +1,10 @@
+<p>Manage employees</p>
+<div class="employees-list">
+    <ul>
+      <li *ngFor="let emp of employees" (click)="select.emit(emp)">
+        {{ emp.name }}
+      </li>
+    </ul>
+    <button (click)="add.emit()">+ Add Employee</button>
+  </div>
+  
