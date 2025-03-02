@@ -1,0 +1,16 @@
+<app-main-layout-menu></app-main-layout-menu>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <ng-container *ngIf="isClientsPage">
+        <app-clients-module-menu></app-clients-module-menu>
+      </ng-container>
+      <ng-container *ngIf="isEmployeesPage">
+        <app-employees-module-menu></app-employees-module-menu>
+      </ng-container>
+    </div>
+    <div class="col-md-9">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
